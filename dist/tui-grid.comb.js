@@ -6781,8 +6781,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        _.each(rowKeys, function(rowKey) {
 	            _.each(columnNames, function(columnName) {
-	                this.del(rowKey, columnName, true);
-	                this.get(rowKey).validateCell(columnName, true);
+	                this.del(rowKey, columnName, false);
+	                this.get(rowKey).validateCell(columnName, false);
 	            }, this);
 	        }, this);
 

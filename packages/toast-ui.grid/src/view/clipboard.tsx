@@ -77,18 +77,18 @@ class ClipboardComp extends Component<Props> {
        * - Step 3: Finally, when 'copy' event is fired on browsers,
        *           setting copied data to ClipboardEvent.clipboardData or window.clipboardData(IE).
        */
-      case 'clipboard': {
-        if (!this.el) {
-          return;
-        }
-        const { store } = this.context;
-        this.el.innerHTML = getText(store);
-
-        if (isSupportWindowClipboardData()) {
-          setClipboardSelection(this.el.childNodes[0]);
-        }
-        break;
-      }
+      // case 'clipboard': {
+      //   if (!this.el) {
+      //     return;
+      //   }
+      //   const { store } = this.context;
+      //   this.el.innerHTML = getText(store);
+      //
+      //   if (isSupportWindowClipboardData()) {
+      //     setClipboardSelection(this.el.childNodes[0]);
+      //   }
+      //   break;
+      // }
       default:
         break;
     }
@@ -224,7 +224,6 @@ class ClipboardComp extends Component<Props> {
         onBlur={this.onBlur}
         onKeyDown={this.onKeyDown}
         onCopy={this.onCopy}
-        onPaste={this.onPaste}
         contentEditable={true}
         ref={el => {
           this.el = el;

@@ -65,9 +65,9 @@ class ClipboardComp extends Component<Props> {
         dispatch('moveSelection', command!);
         dispatch('setScrollToSelection');
         break;
-      case 'remove':
-        dispatch('removeContent');
-        break;
+      // case 'remove':
+      //   dispatch('removeContent');
+      //   break;
       /*
        * Call directly because of timing issues
        * - Step 1: When the keys(ctrl+c) are downed on grid, 'clipboard' is triggered.

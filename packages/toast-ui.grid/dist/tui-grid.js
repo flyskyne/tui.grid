@@ -1,6 +1,6 @@
 /*!
  * TOAST UI Grid
- * @version 4.8.1 | Mon Jan 20 2020
+ * @version 4.8.1 | Tue Jan 21 2020
  * @author NHN. FE Development Lab
  * @license MIT
  */
@@ -12544,9 +12544,9 @@ var ClipboardComp = /** @class */ (function (_super) {
                     dispatch('moveSelection', command);
                     dispatch('setScrollToSelection');
                     break;
-                case 'remove':
-                    dispatch('removeContent');
-                    break;
+                // case 'remove':
+                //   dispatch('removeContent');
+                //   break;
                 /*
                  * Call directly because of timing issues
                  * - Step 1: When the keys(ctrl+c) are downed on grid, 'clipboard' is triggered.
